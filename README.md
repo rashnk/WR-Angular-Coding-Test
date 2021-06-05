@@ -2,7 +2,9 @@
  Coding Test Angular Application
  
  # How to run
- cd user-test
- ```npm i
- npm run start
+ 
+  ```
+cd user-test
+npm i
+npm run start
  ```
