@@ -1,0 +1,16 @@
+<div class="card">
+  <h5>User Login</h5>
+  <div class="p-field p-grid">
+      <label for="firstname3" class="p-col-fixed" style="width:100px">User name</label>
+      <div class="p-col">
+          <input id="firstname3" type="text" pInputText [(ngModel)]="user.username">
+      </div>
+  </div>
+  <div class="p-field p-grid">
+      <label for="lastname3" class="p-col-fixed" style="width:100px">Password</label>
+      <div class="p-col">
+          <input id="lastname3" type="password" pInputText [(ngModel)]="user.password">
+      </div>
+  </div>
+  <button pButton pRipple type="button" label="Submit" (click)="login()">Login</button>
+</div>
