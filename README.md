@@ -3,5 +3,6 @@
  
  # How to run
  cd user-test
- npm i
+ ```npm i
  npm run start
+ ```
