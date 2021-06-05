@@ -7,6 +7,7 @@ import { TableModule } from 'primeng/table';
 import { ButtonModule } from 'primeng/button';
 import { DropdownModule } from 'primeng/dropdown';
 import { UserComponent } from './user/user.component';
+import {InputTextModule} from 'primeng/inputtext';
 import { UsersComponent } from './users/users.component';
 import { FormsModule } from '@angular/forms';
 
@@ -18,7 +19,7 @@ import { FormsModule } from '@angular/forms';
   ],
   imports: [
     CommonModule,
-    HomeRoutingModule, TableModule, ButtonModule, DropdownModule,FormsModule
+    HomeRoutingModule, TableModule, ButtonModule, DropdownModule,FormsModule,InputTextModule
   ]
 })
 export class HomeModule { }
