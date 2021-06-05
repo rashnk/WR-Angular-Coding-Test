@@ -1,1 +1,59 @@
-<p>user works!</p>
+<form ngf>
+  <div class="p-field p-grid">
+    <label for="firstname3" class="p-col-fixed" style="width:100px">Title</label>
+    <div class="p-col">
+      <p-dropdown name="title" [options]="titles" [(ngModel)]="user.user.name.title" optionLabel="name" optionValue="code">
+      </p-dropdown>
+    </div>
+  </div>
+  <div class="p-field p-grid">
+    <label for="firstname3" class="p-col-fixed" style="width:100px">Firstname</label>
+    <div class="p-col">
+      <input name="firstname" id="firstname" type="text" pInputText [(ngModel)]="user.user.name.first" required>
+    </div>
+  </div>
+  <div class="p-field p-grid">
+    <label for="lastname3" class="p-col-fixed" style="width:100px">Lastname</label>
+    <div class="p-col">
+      <input name="lastname" id="lastname3" type="text" pInputText [(ngModel)]="user.user.name.last" required>
+    </div>
+  </div>
+  <div class="p-field p-grid">
+    <label for="lastname3" class="p-col-fixed" style="width:100px">Email</label>
+    <div class="p-col">
+      <input name="email" id="lastname3" type="email" pInputText [(ngModel)]="user.user.email">
+    </div>
+  </div>
+  <div class="p-field p-grid">
+    <label for="lastname3" class="p-col-fixed" style="width:100px">User name</label>
+    <div class="p-col">
+      <input name="username" id="lastname3" type="email" pInputText [(ngModel)]="user.user.username" required>
+    </div>
+  </div>
+  <div class="p-field p-grid">
+    <label for="lastname3" class="p-col-fixed" style="width:100px">Password</label>
+    <div class="p-col">
+      <input name="password" id="lastname3" type="text" pInputText [(ngModel)]="user.user.password" required>
+    </div>
+  </div>
+  <div class="p-field p-grid">
+    <label for="lastname3" class="p-col-fixed" style="width:100px">Gender</label>
+    <div class="p-col">
+      <p-dropdown name="genders" [options]="genders" [(ngModel)]="user.user.gender" optionLabel="name" optionValue="code"></p-dropdown>
+    </div>
+  </div>
+  <div class="p-field p-grid">
+    <label for="lastname3" class="p-col-fixed" style="width:100px">DOB</label>
+    <div class="p-col">
+      <input name="dob" id="lastname3" type="date" pInputText [(ngModel)]="user.user.dob">
+    </div>
+  </div>
+  <div class="p-field p-grid">
+    <label for="lastname3" class="p-col-fixed" style="width:100px">Cell</label>
+    <div class="p-col">
+      <input name="cell" id="lastname3" type="tel" pInputText [(ngModel)]="user.user.cell">
+    </div>
+  </div>
+
+  <button pButton type="submit" label="Save" (click)="save()"></button>
+</form>

@@ -24,6 +24,8 @@ export class LoginComponent implements OnInit {
     let result = this.userSrvc.isValidCredentials(this.user);
     if (result) {
       this.router.navigate(['home'])
+    }else{
+      alert('Wrong credentails')
     }
   }
 

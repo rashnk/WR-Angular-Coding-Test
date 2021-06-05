@@ -26,13 +26,24 @@ export class UserService {
     }
   }
 
-  getUsers() {
+  getUsers(): any[] {
     let _users = localStorage.getItem('users');
     if (_users) {
       // users already fetched
       return JSON.parse(_users)
     } else {
       return []
+    }
+  }
+
+  addUser(user: any):boolean {
+    let _users: any[] = this.getUsers();
+    if (_users.length) {
+      _users.push(user)
+      localStorage.setItem('users', JSON.stringify(_users))
+      return true
+    }else{
+      return false
     }
   }
 

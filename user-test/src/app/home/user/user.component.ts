@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Genders, Titles, UserData } from 'src/app/models/models';
+import { UserService } from 'src/app/user.service';
 
 @Component({
   selector: 'app-user',
@@ -7,8 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserComponent implements OnInit {
 
-  constructor() { }
+  constructor(private userSrvc: UserService) { }
+  user = UserData
+  genders = Genders
+  titles = Titles
 
+  save() {
+    let success = this.userSrvc.addUser(this.user);
+    if (success) {
+      alert('User saved')
+    } else {
+      alert('Something went wrong')
+    }
+  }
   ngOnInit(): void {
   }
 
