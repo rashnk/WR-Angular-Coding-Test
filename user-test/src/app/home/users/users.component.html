@@ -1,7 +1,9 @@
 
 <button pButton type="button" label="New User" (click)="create()" ></button>
-
-<p-table [value]="users">
+<div class="p-col">
+  <input type="text" pInputText [(ngModel)]="searchText" placeholder="search name">
+</div>
+<p-table [value]="filteredUsers">
   <ng-template pTemplate="header">
       <tr>
           <th>Name</th>

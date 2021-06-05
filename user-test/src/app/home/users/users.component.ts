@@ -11,8 +11,13 @@ export class UsersComponent implements OnInit {
 
   constructor(private userSrvc: UserService, private router: Router) { }
   users: any = []
+  searchText = ''
   ngOnInit(): void {
     this.users = this.userSrvc.getUsers()
+  }
+
+  get filteredUsers():any[] {
+    return this.users.filter((u:any) => u.user.name.first.startsWith(this.searchText))
   }
 
   create() {
